@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function convertCurrency() {
+      var amount = parseFloat(document.getElementById("amount").value);
+      var exchangeRate = parseFloat(
+        document.getElementById("exchangeRate").value
+      );
+
+      var convertedAmount = amount * exchangeRate;
+
+      document.getElementById("currencyResult").innerHTML =
+        "Converted Amount: " + convertedAmount.toFixed(2) + " PKR";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Converter</h1>
+
+    <form>
+      <div class="input-group">
+        <label for="amount">Amount (USD):</label>
+        <input type="text" id="amount" placeholder="Enter amount" />
+      </div>
+
+      <div class="input-group">
+        <label for="exchangeRate">Exchange Rate (PKR):</label>
+        <input
+          type="text"
+          id="exchangeRate"
+          placeholder="Enter exchange rate"
+        />
+      </div>
+
+      <button class="button" type="button" onclick="convertCurrency()">
+        Convert Currency
+      </button>
+
+      <div class="result" id="currencyResult"></div>
+    </form>
+
+    <a href="index.html" class="button">Back</a>
+
+    <div class="madeby"><a href="https://tajo852.github.io/Task1/">made by Taj Wali</a> </div>
+  </div>
+</body>
+</html>

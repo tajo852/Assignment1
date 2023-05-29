@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Volume Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function calculateVolume() {
+      var length = parseFloat(document.getElementById("length").value);
+      var width = parseFloat(document.getElementById("width").value);
+      var height = parseFloat(document.getElementById("height").value);
+
+      var volume = length * width * height;
+
+      document.getElementById("volumeResult").innerHTML =
+        "Volume: " + volume.toFixed(2) + " cubic units";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Volume Converter</h1>
+
+    <form>
+      <div class="input-group">
+        <label for="length">Length:</label>
+        <input type="text" id="length" placeholder="Enter length" />
+      </div>
+
+      <div class="input-group">
+        <label for="width">Width:</label>
+        <input type="text" id="width" placeholder="Enter width" />
+      </div>
+
+      <div class="input-group">
+        <label for="height">Height:</label>
+        <input type="text" id="height" placeholder="Enter height" />
+      </div>
+
+      <button class="button" type="button" onclick="calculateVolume()">
+        Calculate Volume
+      </button>
+
+      <div class="result" id="volumeResult"></div>
+    </form>
+
+    <a href="index.html" class="button">Back</a>
+
+    <div class="madeby"><a href="https://tajo852.github.io/Task1/">made by Taj Wali</a> </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function convertTemperature() {
+      var temperature = parseFloat(
+        document.getElementById("temperature").value
+      );
+      var convertedTemperature = ((temperature - 32) * 5) / 9;
+
+      document.getElementById("temperatureResult").innerHTML =
+        "Converted Temperature: " + convertedTemperature.toFixed(2) + " °C";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+
+    <form>
+      <div class="input-group">
+        <label for="temperature">Temperature (°F):</label>
+        <input type="text" id="temperature" placeholder="Enter temperature" />
+      </div>
+
+      <button class="button" type="button" onclick="convertTemperature()">
+        Convert Temperature
+      </button>
+
+      <div class="result" id="temperatureResult"></div>
+    </form>
+
+    <a href="index.html" class="button">Back</a>
+
+    <div class="madeby"><a href="https://tajo852.github.io/Task1/">made by Taj Wali</a> </div>
+  </div>
+</body>
+</html>
